@@ -27,11 +27,10 @@ public class Win {
         return rst;
     }
 
-
     public static boolean isWin(int[][] board) {
         boolean rst = false;
         for (int i = 0; i < board.length; i++) {
-            if (monoHorizontal(board, i) || monoVertical(board, i)) {
+            if ((board[i][i] == 1) && (monoHorizontal(board, i) || monoVertical(board, i))) {
                 rst = true;
                 break;
             }
